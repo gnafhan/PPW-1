@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Soal 2</title>
+    
+        <!-- Style web -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/font.css">
+        <link rel="stylesheet" href="../assets/soal2.css">
+        <style>
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div>
+                    <img src="../assets/batman.png" alt="">
+                </div>
+                <h1>BATMAN</h1>
+            </header>
+            <main>
+                <section>
+                    <p>Formulir panggil batman</p>
+                    <form action="" >
+                        <div class="firstDiv" >
+                            <div>
+                                <label for="firstName">Nama Depan :</label>
+                                <input id="firstName" name="firstName" autofocus type="text">
+                            </div>
+                            <div>
+                                <label for="lastName">Nama Belakang :</label>
+                                <input id="lastName" name="lastName" type="text">
+                            </div>
+                        </div>
+                        <div class="secondDiv">
+                            <label>Masalah :</label>
+                            <div>
+                                <div>
+                                    <input id="radio1" name="masalah" value="joker" type="radio">
+                                    <label for="radio1">Ada Joker</label>
+                                </div>
+                                <div>
+                                    <input id="radio2" name="masalah" value="bis" type="radio">
+                                    <label for="radio2">Bis Terguling</label>
+                                </div>
+                                <div>
+                                    <input id="radio3" name="masalah" value="indomie" type="radio">
+                                    <label for="radio3">Indomie Tumpah</label>
+                                </div>
+                                <div>
+                                    <input id="radio4" name="masalah" value="joker" type="radio">
+                                    <label for="radio4"> Pohon tumbang</label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="thirdDiv">
+                            <label for="">Waktu Kejadian:</label>
+                            <input type="datetime-local" name="" id="">
+                        </div>
+                        
+                        <div>
+                            <div class="midImg"">
+                                <img width="500px" id="output" />
+                            </div>
+                            <label for="">Foto Sekitar</label>
+                            <label for="file">Upload Foto</label>
+                            <input type="file" name="" id="file" accept="image/*" onchange="loadFile(event)">
+                        </div>
+                        <div class="lastDiv">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </main>
+
+        <script>
+                var loadFile = function(event) {
+                var reader = new FileReader();
+                reader.onload = function(){
+                var output = document.getElementById('output');
+                output.src = reader.result;
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            };
+        </script>
+    </body>
+</html>

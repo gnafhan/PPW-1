@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Soal 1</title>
+    
+        <!-- Style web -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/font.css">
+        <link rel="stylesheet" href="../assets/soal1.css">
+        <style>
+        </style>
+    </head>
+<body>
+    <header style="justify-content: center;">
+        <h3>Soal 1</h3>
+    </header>
+
+    <main style="display: flex; flex-direction: column;">
+
+        <!-- fieldset dan legend -->
+        <section>
+            <form action="">
+                <!-- Fieldset digunakan untuk membuat form menjadi berkelompok dan biasanya dikelompokan sesuai konteks -->
+                <fieldset>
+                    <!-- legend digunakan untuk melabeli atau memberi tahu nama dari grup fieldset tersebut, semisal pada grup ini adalah profile -->
+                    <legend>Profile</legend>
+                    <label for="fnama">Nama Depan: </label>
+                    <input type="text" id="fnama">
+                    <br>   
+                    <label for="lnama">Nama Belakang: </label>
+                    <input type="text" id="lnama">    
+                </fieldset>
+                <br>
+                <!-- Fieldset kuiz -->
+                <fieldset >
+                    <!-- legend memberi tahu ini merupakan kuiz -->
+                    <legend>Kuiz 1</legend>
+                    <label for="jawaban1">Siapa presiden sekarang: </label>
+                    <input type="text" id="jawaban1">
+                    <br>
+                    <label for="jawaban2">Apa pendapatmu tentang presiden: </label><br>
+                    <textarea name="" id="jawaban2" cols="50" rows="10"></textarea>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- datalist dan option -->
+        <section style="margin-top: 10px;">
+            <form action="">
+                <label for="baju">Pakai baju apa:</label>
+                <input list="bajus" id="baju">
+                <!-- data list menunjukan opsi pilihan untuk tag input yang ada dengan menambahkan atribut list sesuai dengan id datalist. -->
+                <datalist id="bajus">
+                        <!-- option merupakan pilihan dari list yang akan dimasukkan dengan menggunakan atribut value -->
+                        <option value="Baju batik">
+                        <option value="Baju baru">
+                        <option value="Baju kemeja">
+                </datalist>
+            </form>
+        </section>
+
+        <!-- output, select, dan option grup -->
+        <section>
+            <!-- on input merupakan atribut untuk menjalankan fungsi, ketika ada input maka menjalankan fungsi yang diinginkan -->
+            <form oninput="output.value=warna.value" action=""><!--output.value=warna.value  merupakan kode ketika ada input maka set output value menjadi warna value (hasil pilihan) -->
+                <label for="warna">Pilih warna kesukaanmu:</label>
+                <select name="warna" id="warna">
+                    <!-- optgrup untuk mengelompokkan option menjadi satu kelompok sesuai konteks, misal warna cerah -->
+                    <optgroup label="Warna-warna cerah">
+                        <option value="Merah">Merah</option>
+                        <option value="Kuning">Kuning</option>
+                        <option value="Hijau">Hijau</option>
+                    </optgroup>
+                    <!-- konteks warna gelap -->
+                    <optgroup label="Warna-warna gelap">
+                        <option value="Hitam">Hitam</option>
+                        <option value="Biru">Biru</option>
+                        <option value="Ungu">Ungu</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label for="output">Output: </label>
+                <!-- output untuk menampilkan hasil input -->
+                <output for="warna" name="output" id="output"></output>
+            </form>
+        </section>
+        
+    </main>
+</body>
+</html>
