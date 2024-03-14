@@ -1,0 +1,43 @@
+header{
+    display: flex; width: 100%;  justify-content: space-between; align-items: center;    
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+nav{
+    display: flex; gap: 10px; width: 30vw;
+}
+
+ul{
+    display: flex; list-style: none; justify-content: space-between; width: 100%;
+}
+
+main{
+    display: flex;align-items: center;
+}
+
+main section{
+    flex: 1 1 0%
+}
+
+aside{
+    flex: 0.5 0.5 0%;display: flex; background-color: #e183de; padding: 10px;
+}
+
+footer{
+    justify-content: center; display: flex; margin-top: 10px;
+}
+
+/* android  */
+@media (max-width: 768px){
+
+    nav{
+        width: 100%;
+        display: none;
+    }
+}
+
