@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/N-03.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <title>Ghifari Nafhan | Article Card</title>
 </head>
+
 <body>
   <main class="container">
     <section class="card">
-        <img class="card_img" src="images/drawers.jpg" width="320px" height="200px"  alt="">
-        <section class="card_body">
-            <section class="card_content" >
-                <header>
-                    <h2 class="card_header">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h3> 
-                </header>
-                <article class="card_description">
-                    Ever been in a room and felt like something was missing? Perhaps it felt slightly base and uninviting. I've got some simple tips to help you make any room feel complete. 
-                </article>
-                <section class="card_info">
-                    <summary  class="card_info_detail">
-                      <img class="author_image" src="images/avatar-michelle.jpg" alt="">
-                      <div>
-                        <strong class="author_name">Michele Appleton</strong>
-                        <p class="card_date">28 Jun 2020</p>
-                      </div>
-                    </summary>
-                    <img class="share_button" src="images/icon-share.svg" alt="">
-                  </section>
-            </div>
-        </div>
-       
-    </section>
+      <img class="card_img" src="images/drawers.jpg" width="320px" height="200px" alt="">
+      <section class="card_body">
+        <section class="card_content">
+          <header>
+            <h2 class="card_header">Shift the overall look and feel by adding these wonderful touches to furniture in
+              your home</h3>
+          </header>
+          <article class="card_description">
+            Ever been in a room and felt like something was missing? Perhaps it felt slightly base and uninviting. I've
+            got some simple tips to help you make any room feel complete.
+          </article>
+          <section class="card_info">
+            <summary class="card_info_detail">
+              <img class="author_image" src="images/avatar-michelle.jpg" alt="">
+              <div>
+                <strong class="author_name">Michele Appleton</strong>
+                <p class="card_date">28 Jun 2020</p>
+              </div>
+            </summary>
+            <section class="btn btn-primary tooltip"> <img class="share_button" src="images/icon-share.svg" alt="">
+              <div class="top">
+                <div class="tooltip_item">
+                  <p class="share">S H A R E</p>
+                  <img src="images/icon-facebook.svg" alt="">
+                  <img src="images/icon-twitter.svg" alt="">
+                  <img src="images/icon-pinterest.svg" alt="">
+                </div>
+                <i></i>
+              </div>
+            </section>
+          </section>
+          </div>
+          </div>
+
+        </section>
   </main>
 
+  <script>
+    var isClick = false;
+    var btn = document.querySelector('.btn');
+    var tooltip = document.querySelector('.top');
+    btn.addEventListener('click', function () {
+      if (!isClick) {
+        tooltip.style.visibility = 'visible';
+        tooltip.style.opacity = '1';
+        isClick = true;
+      } else {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+        tooltip.style.transition = 'all 0.8s';
+        isClick = false;
+      }
+    });
+  </script>
 </body>
+
 </html>

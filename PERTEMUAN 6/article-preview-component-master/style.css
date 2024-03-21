@@ -94,9 +94,67 @@
     padding: 8px;
     background-color: var(--light-grayish-blue); 
     border-radius: 100%;
+    cursor: pointer;
 }
 
-/* media android */
+.tooltip {
+    display:inline-block;
+    position:relative;
+    text-align:left;
+}
+
+.tooltip_item{
+    display: flex; width: 100%; justify-content: space-between; align-items: center;
+}
+
+.tooltip_item img{
+    cursor: pointer;
+}
+
+.share{
+    letter-spacing: 1px;font-size: 11px;
+}
+
+.tooltip .top {
+    min-width:220px; 
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -100%);
+    padding:1px 30px ;
+    color:var(--grayish-blue);
+    background-color:var(--very-dark-grayish-blue);
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    /* box-shadow:0 1px 8px rgba(0,0,0,0.5); */
+    visibility:hidden; opacity:0; transition:opacity 0.8s; 
+}
+
+.tooltip .top i {
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+}
+
+.tooltip .top i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background-color:var(--very-dark-grayish-blue);
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+/* media desktop */
 
 @media (min-width: 768px)  {
     .card{
@@ -138,4 +196,10 @@
     .share_button{
         margin-right: 30px;
     }
+
+    
+    .tooltip .top i {
+        left:42%;
+    }
+    
 }
