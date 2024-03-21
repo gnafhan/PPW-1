@@ -1,0 +1,141 @@
+:root{
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+  }
+  body{
+    font-family: 'Manrope', Helvetica, sans-serif;
+    font-weight: 500;
+    color: var(--desaturated-dark-blue);
+    font-size: 13px;
+    background-color: var(--light-grayish-blue);
+    /* letter-spacing: 1px; */
+  }
+  h2{
+    margin: 0;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--very-dark-grayish-blue);
+  }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card_body{
+    background-color: white;
+    gap: 10px; 
+    border-radius: 0px 0px 10px 10px; 
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.card_img{
+    object-fit: cover;
+    object-position: 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card_content{
+    max-width: 260px;
+    padding: 30px 10px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card_header{
+    font-size: 15px;
+}
+
+.card_description{
+    margin-right: 2px;
+}
+
+.card_info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_info_detail {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+}
+
+.author_image{
+    border-radius: 100%;
+    width: 30px;
+}
+
+.author_name{
+    margin: 0; 
+    color: var(--very-dark-grayish-blue);
+}
+
+.card_date{
+    margin: 0; 
+    color: var(--grayish-blue);
+}
+
+.share_button{
+    padding: 8px;
+    background-color: var(--light-grayish-blue); 
+    border-radius: 100%;
+}
+
+/* media android */
+
+@media (min-width: 768px)  {
+    .card{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .card_img{
+        border-radius: 10px 0px 0px 10px;
+        height:260px;
+        width: 260px;
+        object-fit:cover;
+    }
+    .card_header{
+        margin-right: 50px;
+        letter-spacing: 0.2px;
+        font-size: 17px
+    }
+
+    .card_body{
+        border-radius: 0px 10px 10px 0px;
+        max-height: 260px;
+        box-shadow: none;
+        width: 390px;
+    }
+    .card_content{
+        max-width: 400px;
+        justify-content: space-between;
+        height: 78%;
+        gap: 0px;
+    }
+
+    .card_description
+    {
+        margin-right: 0px;
+        font-size: 12px;
+        line-height: 160%;
+    }
+    .share_button{
+        margin-right: 30px;
+    }
+}

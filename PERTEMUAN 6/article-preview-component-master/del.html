@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --very-dark-grayish-blue: hsl(217, 19%, 35%);
+      --desaturated-dark-blue: hsl(214, 17%, 51%);
+      --grayish-blue: hsl(212, 23%, 69%);
+      --light-grayish-blue: hsl(210, 46%, 95%);
+      --white: hsl(0, 0%, 100%);
+    }
+    body{
+      font-family: 'Manrope', Helvetica, sans-serif;
+      font-weight: 500;
+      color: var(--desaturated-dark-blue);
+      font-size: 13px;
+      background-color: var(--light-grayish-blue);
+      /* letter-spacing: 1px; */
+    }
+    h2{
+      margin: 0;
+      font-weight: 700;
+      line-height: 125%;
+      color: var(--very-dark-grayish-blue);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div>
+    <div style=" display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100vh; ">
+      <div style="display: flex; flex-wrap: wrap; background-color: white; border-radius: 10px; box-shadow: 10px black; ">
+      <img src="images/drawers.jpg" style="width: 290px; height: 265px; object-fit: cover; border-radius: 10px 0 0 10px;" alt="">
+      <div style="max-width: 375px;padding: 20px 20px 20px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <h2 style="margin: 10px;">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h3>
+        <p style="margin: 10px; margin-top: 0;line-height: 20px;" >Ever been in a room and felt like something was missing? Perhaps it felt slightly base and uninviting. I've got some simple tips to help you make any room feel complete. </p>
+        <div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <img style="border-radius: 100%; margin-left: 10px;" width="40px" src="images/avatar-michelle.jpg" alt="">
+            <div>
+              <strong style="margin: 0; color: var(--very-dark-grayish-blue);">Michele Appleton</strong>
+              <p style="margin: 0; color: var(--grayish-blue);">28 Jun 2020</p>
+            </div>
+          </div>
+          <img style="padding: 8px; background-color: var(--light-grayish-blue); border-radius: 100%; margin-right: 10px;" src="images/icon-share.svg" alt="">
+        </div>
+      </div>
+      </div>    
+    </div>
+  </div>
+
+</body>
+</html>
